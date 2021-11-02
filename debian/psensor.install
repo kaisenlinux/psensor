@@ -1,0 +1,7 @@
+/usr/bin/psensor
+/usr/share/glib-2.0
+/usr/share/icons
+/usr/share/psensor/psensor-pref.glade
+/usr/share/psensor/sensor-edit.glade
+/usr/share/psensor/psensor.glade
+/usr/share/psensor/psensor-appindicator.glade

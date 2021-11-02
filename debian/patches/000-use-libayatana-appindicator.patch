@@ -1,0 +1,38 @@
+Author: Kevin Chevreuil - Kaisen <kaisen@kaisenlinux.org>
+
+--- psensor-1.2.1.orig/configure.ac
++++ psensor-1.2.1/configure.ac
+@@ -117,9 +117,9 @@ AC_SUBST(LIBNOTIFY_LIBS)
+ 
+ # Checks AppIndicator 
+ APPINDICATOR_LIBS=
+-PKG_CHECK_MODULES(APPINDICATOR, appindicator3-0.1,
++PKG_CHECK_MODULES(APPINDICATOR, ayatana-appindicator3-0.1,
+      [AC_DEFINE([HAVE_APPINDICATOR],[1],[Use AppIndicator3-0.1])],
+-     [AC_MSG_WARN(AppIndicator 3-0.1 not present")])
++     [AC_MSG_WARN(Ayatana AppIndicator 3-0.1 not present")])
+ AM_CONDITIONAL(APPINDICATOR, test -n "$APPINDICATOR_LIBS")
+ AC_SUBST(APPINDICATOR_CFLAGS)
+ AC_SUBST(APPINDICATOR_LIBS)
+--- psensor-1.2.1.orig/src/ui.h
++++ psensor-1.2.1/src/ui.h
+@@ -27,7 +27,7 @@
+ #include <gtk/gtk.h>
+ 
+ #if defined(HAVE_APPINDICATOR)
+-#include <libappindicator/app-indicator.h>
++#include <libayatana-appindicator/app-indicator.h>
+ #endif
+ 
+ #include "psensor.h"
+--- psensor-1.2.1.orig/src/ui_appindicator.c
++++ psensor-1.2.1/src/ui_appindicator.c
+@@ -21,7 +21,7 @@
+ #include <string.h>
+ 
+ #include <gtk/gtk.h>
+-#include <libappindicator/app-indicator.h>
++#include <libayatana-appindicator/app-indicator.h>
+ 
+ #include <cfg.h>
+ #include <psensor.h>

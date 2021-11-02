@@ -1,0 +1,13 @@
+= Psensor TODO
+:docinfo2:
+
+The last version of this file is available at
+https://gitlab.com/jeanfi/psensor/blob/master/doc/TODO.txt
+
+ * Play a sound when a sensor alert is raised. Note that
+   it can actually be done by using the script support.
+
+ * Use max/crit temperature information provided by
+   lm-sensor.
+
+ * Include help/faq directly in psensor UI.

@@ -1,0 +1,7 @@
+#!/usr/bin/make -f
+
+export GCONF_DISABLE_MAKEFILE_SCHEMA_INSTALL=1
+export DEB_BUILD_OPTIONS=noautodbgsym
+
+%:
+	dh $@ --with=autoreconf
